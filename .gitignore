@@ -1,0 +1,14 @@
+# executaveis
+jogga
+jogga.exe
+tests/test_servicos
+tests/test_servicos.exe
+*.o
+
+# dados gerados em tempo de execucao
+dados/
+tests/dados_teste/*.dat
+
+# sistema
+.DS_Store
+.vscode/
