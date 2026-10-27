@@ -40,7 +40,7 @@ Explicação detalhada: [`docs/arquitetura.md`](docs/arquitetura.md)
 
 ### Casos de uso
 
-![Diagrama de casos de uso](docs/casos_de_uso.png)
+![Diagrama de casos de uso](Diagrama de classe de uso.png)
 
 O **cliente** consulta horários, agenda, consulta e cancela as próprias reservas. O **administrador** herda tudo do cliente e ainda cadastra quadras e acompanha a agenda geral. *Agendar horário* inclui os casos de uso **Validar conflito de horário** e **Validar data e horário**.
 
@@ -48,7 +48,7 @@ O **cliente** consulta horários, agenda, consulta e cancela as próprias reserv
 
 Em C não existem classes: cada **módulo** (`.c` + `.h`) é representado como uma classe com o estereótipo `<<módulo>>`, e suas **rotinas** (funções) aparecem como métodos. As structs aparecem com o estereótipo `<<struct>>`. `+` = função pública (declarada no `.h`), `-` = função `static` (privada).
 
-![Diagrama de classes](JOGGA.png)
+![Diagrama de classes](diagrama de classes.png)
 
 ### Sequência - Agendar horário (opcional)
 
