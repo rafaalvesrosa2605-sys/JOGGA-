@@ -115,10 +115,11 @@ Windows: `gcc -std=c99 -o tests/test_servicos.exe tests/test_servicos.c src/repo
 
 | Integrante | Responsabilidade |
 |---|---|
-| *RAFAEL* | Modelo e banco de dados (`src/modelo`, `banco.c`) |
-| *JOAO* | Repositórios (`src/repositorio`) |
-| *ROMERO* | Serviços e regras de negócio (`src/servico`, `tests`) |
-| *CAUE* | Telas (`src/apresentacao`, `main.c`) |
-| *DUDA* | Documentação e diagramas (`docs`) |
+| *RAFAEL ALVES ROSA* | Modelo e banco de dados (`src/modelo`, `banco.c`) |
+| *JOAO PEDRO CARVALHO* | Repositórios (`src/repositorio`) |
+| *JOAO PEDRO ROMERO* | Serviços e regras de negócio (`src/servico`, `tests`) |
+| *CAUE SILVA* | Telas (`src/apresentacao`, `main.c`) |
+| *MARIA EDUARDA CURSINO* | Documentação e diagramas (`docs`) |
+| *CAUA CORREA* |  Documentação e diagramas (`docs`) |
 
 Disciplina: ESWA - UNIP
