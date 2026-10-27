@@ -50,14 +50,6 @@ Em C não existem classes: cada **módulo** (`.c` + `.h`) é representado como u
 
 ![Diagrama de classes](DiagramadeClasses.png)
 
-### Sequência - Agendar horário (opcional)
-
-![Diagrama de sequência](docs/sequencia_agendar.png)
-
-### Atividade - Agendar horário (opcional)
-
-![Diagrama de atividade](docs/atividade_agendar.png)
-
 Os arquivos-fonte dos diagramas (PlantUML) estão em [`docs/fontes`](docs/fontes). Para editar, cole o conteúdo em <https://www.plantuml.com/plantuml> e exporte o PNG.
 
 ## Estrutura de pastas
