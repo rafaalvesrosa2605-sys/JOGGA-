@@ -48,7 +48,7 @@ O **cliente** consulta horários, agenda, consulta e cancela as próprias reserv
 
 Em C não existem classes: cada **módulo** (`.c` + `.h`) é representado como uma classe com o estereótipo `<<módulo>>`, e suas **rotinas** (funções) aparecem como métodos. As structs aparecem com o estereótipo `<<struct>>`. `+` = função pública (declarada no `.h`), `-` = função `static` (privada).
 
-![Diagrama de classes](docs/classes.png)
+![Diagrama de classes](JOGGA.png)
 
 Versão resumida em Mermaid (renderizada pelo próprio GitHub):
 
