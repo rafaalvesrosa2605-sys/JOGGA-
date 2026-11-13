@@ -50,6 +50,8 @@ Em C não existem classes: cada **módulo** (`.c` + `.h`) é representado como u
 
 ![Diagrama de classes](DiagramadeClasses.png)
 
+![Diagrama de Atividade](DiagramadeAtividade.png)
+
 Os arquivos-fonte dos diagramas (PlantUML) estão em [`docs/fontes`](docs/fontes). Para editar, cole o conteúdo em <https://www.plantuml.com/plantuml> e exporte o PNG.
 
 ## Estrutura de pastas
