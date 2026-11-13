@@ -67,7 +67,36 @@ O cliente faz login, escolhe a opção "Agendar horário" e informa a quadra, a 
 
 Se todas as validações passarem, o sistema grava o agendamento no arquivo `agendamentos.dat` e exibe o código da reserva, e o cliente recebe a confirmação.
 
-![Diagrama de Atividade](DiagramadeAtividade.png)
+### Diagrama de Sequência – Agendar horário
+
+<p align="center">
+  <img src="DiagramadeSequencia.png" alt="Diagrama de sequência do caso de uso Agendar horário">
+</p>
+
+O diagrama de sequência mostra como o caso de uso **Agendar horário** passa pelas camadas do sistema: tela → serviço → repositório → arquivo.
+
+**Participantes:**
+
+| Participante | Camada | Papel |
+|---|---|---|
+| Cliente | — | Usuário que faz a reserva |
+| `tela_agenda` | Apresentação | Recebe os dados e mostra o resultado |
+| `agenda_service` | Serviço | Aplica as regras de negócio e as validações |
+| `quadra_repo` | Repositório | Consulta as quadras cadastradas |
+| `agenda_repo` | Repositório | Lê e grava os agendamentos |
+| `agendamentos.dat` | Dados | Arquivo binário onde as reservas ficam salvas |
+
+**Fluxo:**
+
+1. O cliente escolhe a quadra, a data e a hora na `tela_agenda`, que chama `agenda_agendar(quadra_id, data, hora)` no `agenda_service`.
+2. O serviço confirma que a quadra existe com `quadra_repo_buscar(quadra_id)`.
+3. Em seguida, valida a data (`validar_data`) e o horário de funcionamento (`validar_horario`).
+4. Para verificar conflito (`validar_conflito`), o serviço pede ao `agenda_repo` as reservas daquela quadra no dia (`agenda_repo_listar_por_quadra_data`), e o repositório lê os registros do arquivo com `fread()`.
+5. O resultado depende da disponibilidade:
+   - **Horário livre:** o serviço chama `agenda_repo_salvar()`, que grava a reserva no `agendamentos.dat` com `fwrite()`. A tela exibe "Reserva confirmada!" com o código da reserva.
+   - **Horário ocupado:** o serviço retorna `ERRO_CONFLITO` e a tela chama `mostrar_erro(ERRO_CONFLITO)` para avisar o cliente.
+
+Esse fluxo segue a arquitetura em camadas do projeto: a tela nunca acessa o arquivo diretamente, e toda regra de negócio fica concentrada no `agenda_service`.
 
 Os arquivos-fonte dos diagramas (PlantUML) estão em [`docs/fontes`](docs/fontes). Para editar, cole o conteúdo em <https://www.plantuml.com/plantuml> e exporte o PNG.
 
