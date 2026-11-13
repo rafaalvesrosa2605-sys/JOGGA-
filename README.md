@@ -50,6 +50,23 @@ Em C não existem classes: cada **módulo** (`.c` + `.h`) é representado como u
 
 ![Diagrama de classes](DiagramadeClasses.png)
 
+### Diagrama de Atividades – Agendar horário
+
+<p align="center">
+  <img src="DiagramadeAtividade.png" alt="Diagrama de atividades do caso de uso Agendar horário" width="500">
+</p>
+
+O diagrama de atividades mostra o fluxo do caso de uso **Agendar horário**, dividido em duas raias: **Cliente** e **Sistema**.
+
+O cliente faz login, escolhe a opção "Agendar horário" e informa a quadra, a data e a hora desejadas. A partir daí, o sistema faz quatro validações em sequência. Se qualquer uma delas falhar, o fluxo é encerrado com uma mensagem de erro:
+
+1. **A quadra existe?** Se não existir, exibe "Quadra não encontrada".
+2. **A data é válida e não está no passado?** Se não for, exibe "Data inválida".
+3. **A hora está entre 08h e 22h?** Se não estiver, exibe "Horário fora do funcionamento".
+4. **A quadra já está reservada nesse dia e hora?** Se estiver, exibe "Conflito de horário".
+
+Se todas as validações passarem, o sistema grava o agendamento no arquivo `agendamentos.dat` e exibe o código da reserva, e o cliente recebe a confirmação.
+
 ![Diagrama de Atividade](DiagramadeAtividade.png)
 
 Os arquivos-fonte dos diagramas (PlantUML) estão em [`docs/fontes`](docs/fontes). Para editar, cole o conteúdo em <https://www.plantuml.com/plantuml> e exporte o PNG.
