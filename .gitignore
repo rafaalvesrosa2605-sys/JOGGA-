@@ -12,3 +12,6 @@ tests/dados_teste/*.dat
 # sistema
 .DS_Store
 .vscode/
+
+# arquivos temporarios do Astah
+*.lock
