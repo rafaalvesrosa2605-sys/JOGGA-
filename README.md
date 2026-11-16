@@ -11,7 +11,7 @@ Aplicação em **linguagem C** (modo console) que permite reservar quadras espor
 - Cadastro de novas quadras e agenda geral do dia (somente administrador)
 - Regra principal: **nunca existem dois agendamentos na mesma quadra, no mesmo dia e horário**
 
-Requisitos completos (RF, RNF e regras de negócio): [`Requisitos_JOGGA.docx`](Requisitos_JOGGA.png)
+Requisitos completos (RF, RNF e regras de negócio): [`Requisitos_JOGGA.png`](Requisitos_JOGGA.png)
 
 ## Arquitetura
 
